@@ -1,6 +1,7 @@
 ;(function () {
   var jsonp = function (url, cb) {
-    var id = Date.now() + "_" + Math.floor(Math.random()*1000);
+    var now = +new Date(),
+      id = now + "_" + Math.floor(Math.random()*1000);
 
     var script = document.createElement("script"),
       callback = "jsonp_" + id,
