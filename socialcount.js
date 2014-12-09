@@ -19,13 +19,13 @@
       url: function (url) {
         return "https://cdn.api.twitter.com/1/urls/count.json?callback=@&url=" + url;
       }, extract: function (data) {
-        return data.count;
+        return data.count || 0;
       }
     }, pinterest: {
       url: function (url) {
         return "https://api.pinterest.com/v1/urls/count.json?callback=@&url=" + url;
       }, extract: function (data) {
-        return data.count;
+        return data.count || 0;
       }
     }, facebook: {
       url: function (url) {
@@ -37,6 +37,8 @@
         if (data[0]) {
           return data[0].like_count + data[0].share_count;
         }
+
+        return 0;
       }
     }
   };
@@ -53,11 +55,21 @@
 
   var exports = {
     get: function (provider, url, cb) {
+      if (typeof url === "function") {
+        cb = url;
+        url = window.location;
+      }
+
       var count = providers[provider];
       jsonp(count.url(url), function (data) {
         cb(count.extract(data));
       });
     }, all: function (url, cb) {
+      if (typeof url === "function") {
+        cb = url;
+        url = window.location;
+      }
+
       var out = {},
           results = 0;
 
