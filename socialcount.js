@@ -1,4 +1,12 @@
-;(function () {
+(function (root, factory) {
+  if (typeof define === "function" && define.amd) {
+    define([], factory);
+  } else if (typeof exports === "object") {
+    module.exports = factory();
+  } else {
+    root.Socialcount = factory();
+  }
+}(this, function () {
   var jsonp = function (url, cb) {
     var now = +new Date(),
       id = now + "_" + Math.floor(Math.random()*1000);
@@ -39,6 +47,12 @@
         }
 
         return 0;
+      }
+    }, google: {
+      url: function (url) {
+        return "https://share.yandex.net/counter/gpp/?callback=@&url=" + url;
+      }, extract: function (data) {
+        return parseInt(data, 10);
       }
     }
   };
@@ -89,10 +103,5 @@
     }
   };
 
-  // If common js is defined use it.
-  if (typeof module === "object" && module !== null) {
-    module.exports = exports;
-  } else {
-    window.Socialcount = exports;
-  }
-})();
+  return exports;
+}));

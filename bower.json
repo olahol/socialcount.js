@@ -1,0 +1,29 @@
+{
+  "name": "socialcount.js",
+  "main": [
+    "socialcount.js"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://github.com/olahol/socialcount.js",
+  "description": "Easily get social share counts for a url.",
+  "keywords": [
+    "social",
+    "count",
+    "counters",
+    "facebook",
+    "google",
+    "pinterest",
+    "twitter"
+  ],
+  "authors": [
+    "Ola Holmström"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

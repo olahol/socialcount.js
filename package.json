@@ -1,10 +1,22 @@
 {
   "name": "socialcount.js"
-  , "private": true
-  , "version": "0.0.4"
+  , "version": "0.1.0"
+  , "description": "Easily get social share counts for a url."
   , "main": "./socialcount.js"
+  , "keywords": [
+    "browser",
+    "social",
+    "count",
+    "counters",
+    "facebook",
+    "google",
+    "pinterest",
+    "twitter"
+  ]
   , "devDependencies": {
     "tape": "*"
+    , "browserify": "*"
+    , "testling": "*"
   }, "testling": {
     "files": "test/*.js"
     , "browsers": [
@@ -18,6 +30,6 @@
       "android-browser/latest"
     ]
   }, "scripts": {
-    "test": "browserify test/index.js | testling -x 'firefox-trunk'"
+    "test": "browserify test/index.js | testling -x 'google-chrome'"
   }
 }
