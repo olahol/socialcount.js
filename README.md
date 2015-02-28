@@ -47,6 +47,11 @@ object with the providers as keys and the counts as values.
 
 ## CHANGELOG
 
+### v0.1.0
+
+* Add UMD so project can be used as AMD module.
+* Add Google Plus as provider `google`.
+
 ### v0.0.4
 
 * If called without a url, use `window.location`
