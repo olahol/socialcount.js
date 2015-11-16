@@ -3,7 +3,7 @@
   "main": [
     "socialcount.js"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/olahol/socialcount.js",
   "description": "Easily get social share counts for a url.",
   "keywords": [

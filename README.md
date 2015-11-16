@@ -47,6 +47,10 @@ object with the providers as keys and the counts as values.
 
 ## CHANGELOG
 
+### v0.1.1
+
+* Add LinkedIn as a provider.
+
 ### v0.1.0
 
 * Add UMD so project can be used as AMD module.
@@ -55,6 +59,11 @@ object with the providers as keys and the counts as values.
 ### v0.0.4
 
 * If called without a url, use `window.location`
+
+## Contributors
+
+* Ola Holmström (@olahol)
+* Filip Danisko (@filipdanisko)
 
 ## License
 

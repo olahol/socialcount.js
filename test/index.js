@@ -2,7 +2,7 @@ var Socialcount = require("../socialcount");
 var test = require("tape");
 
 test("get", function (t) {
-  t.plan(5);
+  t.plan(6);
 
   Socialcount.get("twitter", "http://nytimes.com", function (count) {
     t.ok(count > 10000, "nytimes has at least 10000 shares on twitter");
@@ -30,7 +30,7 @@ test("get", function (t) {
 });
 
 test("all", function (t) {
-  t.plan(8);
+  t.plan(10);
 
   Socialcount.all("http://nytimes.com", function (counts) {
     t.ok(counts["twitter"] > 10000, "nytimes has at least 10000 shares on twitter");
