@@ -15,7 +15,7 @@ Socialcount.get("twitter", "http://github.com", function (count) {
 
 ```js
 Socialcount.all("http://github.com", function (counts) {
-  console.log(counts); // { twitter: 1164, facebook: 11111, pinterest: 6 }
+  console.log(counts); // { twitter: 1164, facebook: 11111, pinterest: 6, google: 10000, linkedin: 795 }
 });
 ```
 
@@ -23,7 +23,7 @@ Socialcount.all("http://github.com", function (counts) {
 
 ### Socialcount.get(provider, url, cb(count))
 
-Get share count for `url` from `provider` (currently twitter, facebook, pinterest and google.)
+Get share count for `url` from `provider` (currently twitter, facebook, pinterest, google, and linkedIn.)
 
 * * *
 
@@ -36,7 +36,7 @@ object with the providers as keys and the counts as values.
 
 ### Socialcount.get(provider, cb(count))
 
-Get share count for `window.location` from `provider` (currently twitter, facebook, pinterest and google.)
+Get share count for `window.location` from `provider` (currently twitter, facebook, pinterest, google, and linkedIn.)
 
 * * *
 

@@ -54,6 +54,12 @@
       }, extract: function (data) {
         return parseInt(data, 10);
       }
+    }, linkedin: {
+      url: function (url) {
+        return "https://www.linkedin.com/countserv/count/share?url="+ url +"&callback=@&format=jsonp" ;
+      }, extract: function (data) {
+        return data.count || 0;
+      }
     }
   };
 
