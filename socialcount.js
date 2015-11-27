@@ -23,13 +23,7 @@
   };
 
   var providers = {
-    twitter: {
-      url: function (url) {
-        return "https://cdn.api.twitter.com/1/urls/count.json?callback=@&url=" + url;
-      }, extract: function (data) {
-        return data.count || 0;
-      }
-    }, pinterest: {
+    pinterest: {
       url: function (url) {
         return "https://api.pinterest.com/v1/urls/count.json?callback=@&url=" + url;
       }, extract: function (data) {
