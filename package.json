@@ -1,6 +1,6 @@
 {
   "name": "socialcount.js"
-  , "version": "1.0.0"
+  , "version": "1.0.1"
   , "description": "Easily get social share counts for a url."
   , "main": "./socialcount.js"
   , "keywords": [
