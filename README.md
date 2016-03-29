@@ -49,7 +49,7 @@ object with the providers as keys and the counts as values.
 
 ### v1.0.0
 
-* Rremove Twitter count, https://blog.twitter.com/2015/hard-decisions-for-a-sustainable-platform
+* Remove Twitter count, https://blog.twitter.com/2015/hard-decisions-for-a-sustainable-platform
 
 ### v0.1.1
 
